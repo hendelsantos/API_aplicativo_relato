@@ -77,3 +77,16 @@ staticfiles/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Deployment
+deployment/
+*.pid
+*.sock
+
+# Backup files
+*.bak
+*.backup
