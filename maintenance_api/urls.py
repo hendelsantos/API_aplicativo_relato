@@ -9,9 +9,13 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from .health import HealthCheckView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    
+    # Health check para monitoramento
+    path('api/health/', HealthCheckView.as_view(), name='health-check'),
     
     # API de Autenticação JWT
     path('api/auth/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

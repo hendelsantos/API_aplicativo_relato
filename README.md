@@ -173,6 +173,43 @@ POST   /api/activities/           # Criar atividade
 GET    /api/activities/           # Listar atividades
 ```
 
+## 🐳 Docker (Deployment Simplificado)
+
+### **Desenvolvimento Rápido**
+```bash
+# Executar com Docker Compose
+docker-compose up -d
+
+# Acessar aplicação
+http://localhost:8000
+```
+
+### **Produção Completa**
+```bash
+# Com PostgreSQL + Redis + Nginx
+docker-compose --profile production up -d
+
+# Verificar status
+docker-compose ps
+```
+
+### **Scripts Automatizados**
+```bash
+# Script interativo de instalação
+./deploy.sh
+
+# Gerenciamento Docker
+./docker-manager.sh
+```
+
+## 📋 Scripts Disponíveis
+
+| Script | Descrição |
+|--------|-----------|
+| `./deploy.sh` | Setup completo interativo |
+| `./docker-manager.sh` | Gerenciar containers Docker |
+| `./start.sh` | Inicialização para produção |
+
 ## 🎯 Próximas Implementações
 
 - [ ] Relatórios automáticos por email
